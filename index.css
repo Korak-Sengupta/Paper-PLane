@@ -1,0 +1,256 @@
+@media(min-width: 1200px){
+    body{
+    margin: 0%;
+    padding: 0%;
+    cursor: crosshair;
+    overflow: hidden;
+}
+body::before{
+    content: " ";
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: url(duckbackground.jpeg) repeat-x bottom center;
+    padding: 0%;
+    margin: 0%;
+}
+.score{
+    position: absolute;
+    bottom: 0%;
+    height: 50px;
+    line-height:50px;
+    background-color: black;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    color: blanchedalmond;
+}
+.score::after{
+    content:counter(score);
+    display: inline-block;
+    color: blanchedalmond;
+}
+.score::before{
+    content: "SCORE:";
+    display: inline-block;
+    color: blanchedalmond;
+}
+@keyframes duckfly
+{
+    0%{
+        left:150%;
+        top: 10%;
+    }
+    25%{
+        left:100%;
+        top: 40%;
+    }
+    50%{
+        left:60%;
+        top: 20%;
+    }
+    75%{
+        left:30%;
+        top: 30%;
+    }
+    100%{
+        left:-50%;
+        top: 10%;
+    }
+}
+input + label
+{
+    position: absolute;
+    left: -100pv;
+    z-index: 1;
+    width: 36px;
+    height: 34px;
+    display: block;
+    z-index: 5;
+    transform: translate(-50% -50%);
+    background: url(bird.png) no-repeat left center;
+    
+}
+input:checked+label{
+    opacity: 0;
+    transition: 1.5s;
+    transform: rotate(120deg);
+    transform-origin: 60%;
+    z-index: -5;
+}
+input:checked
+{
+    counter-increment: score;
+}
+.duck:nth-last-of-type(1)
+{
+    animation: duckfly 5s linear 3s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(2)
+{
+    animation: duckfly 8s linear 5s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(3)
+{
+    animation: duckfly 10s linear 7s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(4)
+{
+    animation: duckfly 7s linear 8s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(5)
+{
+    animation: duckfly 20s linear 11s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(6)
+{
+    animation: duckfly 15s linear 10s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(7)
+{
+    animation: duckfly 12s linear 13s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(8)
+{
+    animation: duckfly 8s linear 11s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(9)
+{
+    animation: duckfly 5s linear 6s infinite;
+    cursor: crosshair;
+}
+.duck:nth-last-of-type(10)
+{
+    animation: duckfly 4s linear 10s infinite;
+    cursor: crosshair;
+}
+}
+@media(max-width:1199px)
+{
+    body{
+        margin: 0%;
+        padding: 0%;
+        cursor: url(shooter.png),crosshair;
+        overflow: hidden;
+    }
+    body::before{
+        content: " ";
+        display: block;
+        position: fixed;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background: url(duckbackground.jpeg) repeat-x bottom left;
+        padding: 0%;
+        margin: 0%;
+    }
+    .score{
+        position: absolute;
+        bottom: 0%;
+        height: 50px;
+        line-height:50px;
+        background-color: black;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+        color: blanchedalmond;
+    }
+    .score::after{
+        content:counter(score);
+        display: inline-block;
+        color: blanchedalmond;
+    }
+    .score::before{
+        content: "SCORE:";
+        display: inline-block;
+        color: blanchedalmond;
+    }
+    @keyframes duckfly
+    {
+        0%{
+            left:150%;
+            top: 10%;
+        }
+        25%{
+            left:80%;
+            top: 40%;
+        }
+        50%{
+            left:60%;
+            top: 20%;
+        }
+        75%{
+            left:30%;
+            top: 40%;
+        }
+        100%{
+            left:-50%;
+            top: 10%;
+        }
+    }
+    input + label
+    {
+        position: absolute;
+        left: -100pv;
+        z-index: 1;
+        width: 36px;
+        height: 34px;
+        display: block;
+        z-index: 5;
+        transform: translate(-50% -50%);
+        background: url(bird.png) no-repeat left center;
+        
+    }
+    input:checked+label{
+        opacity: 0;
+        transition: 1.5s;
+        transform: rotate(120deg);
+        transform-origin: 60%;
+        z-index: -5;
+    }
+    input:checked
+    {
+        counter-increment: score;
+    }
+    .duck:nth-last-of-type(1)
+    {
+        animation: duckfly 5s linear 3s infinite;
+        cursor: url(shooter.png),crosshair;
+    }
+    .duck:nth-last-of-type(2)
+    {
+        animation: duckfly 8s linear 5s infinite;
+        cursor: url(shooter.png),crosshair;
+    }
+    .duck:nth-last-of-type(3)
+    {
+        animation: duckfly 10s linear 7s infinite;
+        cursor: url(shooter.png),crosshair;
+    }
+    .duck:nth-last-of-type(4)
+    {
+        animation: duckfly 7s linear 8s infinite;
+        cursor: url(shooter.png),crosshair;
+    }
+    .duck:nth-last-of-type(5)
+    {
+        animation: duckfly 20s linear 19s infinite;
+        cursor: url(shooter.png),crosshair;
+    }
+    .duck:nth-last-of-type(6)
+    {
+        animation: duckfly 15s linear 10s infinite;
+        cursor: url(shooter.png),crosshair;
+    }  
+}
